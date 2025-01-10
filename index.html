@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Placement Prediction</h1>
+        <form action="/predict_placement" method="post">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select><br>
+            
+            <label for="stream">Stream:</label>
+            <select id="stream" name="stream" required>
+                <option value="0">Electronics And Communication</option>
+                <option value="1">Computer Science</option>
+                <option value="2">Mechanical</option>
+                <option value="3">Civil</option>
+                <option value="4">Information Technology</option>
+                <option value="5">Electrical</option>
+            </select><br>
+            
+            <label for="internships">Internships:</label>
+            <input type="number" id="internships" name="internships" required><br>
+            
+            <label for="cgpa">CGPA:</label>
+            <input type="number" id="cgpa" name="cgpa" step="0.01" required><br>
+            
+            <label for="hostel">Hostel:</label>
+            <select id="hostel" name="hostel" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+            
+            <label for="backlogs">History of Backlogs:</label>
+            <input type="number" id="backlogs" name="backlogs" required><br>
+            
+            <button type="submit">Predict Placement</button>
+        </form>
+    </div>
+</body>
+</html>
